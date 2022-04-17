@@ -1,0 +1,6 @@
+---
+const { classes, id } = Astro.props
+---
+<a id={id} class={`bg-pink-600 px-4 py-4 rounded-lg text-white transition-all hover:bg-pink-700 cursor-pointer ${classes}`}>
+	<slot />
+</a>

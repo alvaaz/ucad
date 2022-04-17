@@ -1,0 +1,44 @@
+---
+import Button from '../components/Button.astro';
+---
+
+<div class="border border-gray-200 text-left shadow-md p-6 rounded-lg bg-white md:basis-96">
+  <div class="mb-2 md:mb-4">
+    <span class="text-xs uppercase text-gray-500 tracking-wide md:text-base">Nombre de cuenta</span>
+    <p class="text-gray-900 font-semibold md:text-xl">Corporación Iniciativa UCAD</p>
+  </div>
+  <div class="mb-2 md:mb-4">
+    <span class="text-xs uppercase text-gray-500 tracking-wide md:text-base">Banco</span>
+    <p class="text-gray-900 font-semibold md:text-xl">Santander</p>
+  </div>
+  <div class="mb-2 md:mb-4">
+    <span class="text-xs uppercase text-gray-500 tracking-wide md:text-base">Número de cuenta</span>
+    <p class="text-gray-900 font-semibold md:text-xl">78669268</p>
+  </div>
+  <div class="mb-2 md:mb-4">
+    <span class="text-xs uppercase text-gray-500 tracking-wide md:text-base">RUT</span>
+    <p class="text-gray-900 font-semibold md:text-xl">53.334.036-9</p>
+  </div>
+  <div class="mb-8 md:mb-10">
+    <span class="text-xs uppercase text-gray-500 tracking-wide md:text-base">Correo</span>
+    <p class="text-gray-900 font-semibold md:text-xl">aportes@iniciativaucad.cl</p>
+  </div>
+  <Button id="copy-btn" classes={'block text-center disabled:opacity-75'}>Copiar datos</Button>
+</div>
+<script>
+  document.querySelector('#copy-btn').addEventListener('click', function(){
+    navigator.clipboard.writeText(
+      'Nombre:Corporación Iniciativa UCAD RUT: 53.334.036-9 Banco: Santander-Santiago Tipo: Cuenta Corriente Número de cuenta: 78669268 Email: aportes@iniciativaucad.cl'
+    );
+    this.innerHTML = 'Datos copiados';
+    this.classList.remove('cursor-pointer', 'hover:bg-pink-700', 'bg-pink-600');
+    this.classList.add('bg-pink-400', 'cursor-not-allowed')
+    setTimeout(() => {
+      this.innerHTML = 'Copiar datos';
+      this.classList.remove('cursor-not-allowed', 'bg-pink-400', 'cursor-not-allowed');
+      this.classList.add('bg-pink-600', 'cursor-pointer', 'hover:bg-pink-700')
+    }, 2000);
+
+  });
+
+</script>
