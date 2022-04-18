@@ -41,3 +41,5 @@ Please try to create bug reports that are:
 - _Specific._ Include as much detail as possible: which version, what environment, etc.
 - _Unique._ Do not duplicate existing opened issues.
 - _Scoped to a Single Bug._ One bug per report.
+
+This is a conference project, so please make sure to read the [Contributor Covenant](https://contributor-covenant.org/).

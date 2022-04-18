@@ -16,9 +16,6 @@ import AccountInfo from '../components/AccountInfo.astro';
 import CauseCard from '../components/CauseCard.astro'
 import HandIcon from '../components/icons/HandIcon.astro'
 import BoxIcon from '../components/icons/BoxIcon.astro'
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <html lang="en">
@@ -31,81 +28,95 @@ import BoxIcon from '../components/icons/BoxIcon.astro'
 		<title>UCAD - Corporación iniciativa UCAD</title>
 	</head>
 
-	<body>
-		<header class="h-full bg-cover relative from-cyan-500 to-blue-500 bg-[#612D87] bg-[url('https://images.pexels.com/photos/1233532/pexels-photo-1233532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')] bg-blend-multiply mb-20">
-
-      <div class="container mx-auto px-6 pt-16 pb-32">
-        <div class="flex place-content-center mb-10"><Logo /></div>
-        <h1 class="text-3xl font-bold text-white mb-4 font-title">Corporación iniciativa UCAD</h1>
-        <p class="text-white w-3/5 mb-10">Nuestra labor es ayudar a personas en situación de calle y adultos mayores en estado de vulneración.</p>
+	<body class="md:overflow-x-hidden">
+		<header class="h-full bg-cover relative from-cyan-500 to-blue-500 bg-[#612D87] animate-[heroImage_100s_linear_infinite] bg-center bg-blend-soft-light mb-20 md:mb-32">
+      <div class="container mx-auto px-8 pt-8 md:pt-16 pb-32 md:pb-64">
+        <div class="flex place-content-center mb-10 md:place-content-start md:mb-20"><Logo classes="w-20 h-16 md:w-32 md:h-24" /></div>
+        <h1 class="text-3xl font-bold text-white mb-4 font-title md:text-6xl md:w-1/2 md:mb-8">Corporación iniciativa UCAD</h1>
+        <p class="text-white w-3/5 mb-16 md:text-2xl md:w-1/2">Nuestra labor es ayudar a personas en situación de calle y adultos mayores en estado de vulneración.</p>
         <Button>Sé parte</Button>
       </div>
-      <div class="absolute -bottom-px left-0 w-full overflow-hidden">
+      <div class="absolute -bottom-px md:-bottom-1 2xl:-bottom-2 left-0 w-full overflow-hidden">
         <svg class="relative block w-full fill-white" viewBox="0 0 428 30" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 0.699707C68.3516 18.5165 140.068 28 214 28C287.932 28 359.648 18.5165 428 0.699707V29.5H0V0.699707Z"/>
         </svg>
       </div>
 
     </header>
-    <main class="">
-      <div class="text-center mb-20">
-        <div class="px-8">
+    <main>
+      <div class="text-center mb-32 md:mb-40 md:flex md:gap-10 container mx-auto md:px-8">
+        <div class="md:text-left md:flex-shrink-0 md:basis-1/2">
           <Headline>quiénes somos</Headline>
           <Title>Nuestra misión es darle una comida caliente</Title>
-          <p class="text-base text-gray-500 mb-16">Somos una corporación que nace en la comuna de Quilpué cuyo interés es ir en ayuda de personas en situación de calle y adultos mayores que se encuentran en estado de vulneración alimentaria.</p>
+          <p class="text-base text-gray-400 mb-16 md:text-xl">Somos una corporación que nace en la comuna de Quilpué cuyo interés es ir en ayuda de personas en situación de calle y adultos mayores que se encuentran en estado de vulneración alimentaria.</p>
         </div>
-        <div class="flex items-center gap-4 mb-4 overflow-hidden">
-          <div class="overflow-hidden rounded-lg bg-slate-400 h-20 w-32 flex-shrink-0 -translate-x-14">
-            <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+        <div>
+          <div class="flex items-center gap-4 mb-4 overflow-hidden">
+          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-32 md:w-60 flex-shrink-0 -translate-x-14 md:translate-x-20">
+            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/2.jpg" alt="">
+            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/4.jpg" alt="">
           </div>
-          <div class="overflow-hidden rounded-lg bg-slate-400 h-20 w-36 flex-shrink-0 -translate-x-14">
-            <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/6647119/pexels-photo-6647119.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0 -translate-x-14 md:translate-x-20">
+            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/9.jpg" alt="">
+            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/31.jpg" alt="">
           </div>
-           <div class="overflow-hidden rounded-lg bg-slate-400 h-20 w-32 flex-shrink-0 -translate-x-14">
-            <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/6646883/pexels-photo-6646883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+           <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-32 md:w-60 flex-shrink-0 -translate-x-14 md:translate-x-20">
+            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/27.jpg" alt="">
+            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/24.jpg" alt="">
           </div>
-          <div class="overflow-hidden rounded-lg bg-slate-400 h-20 w-36 flex-shrink-0 -translate-x-14">
-            <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/6994855/pexels-photo-6994855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0 -translate-x-14 md:translate-x-20">
+            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/38.jpg" alt="">
+            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/29.jpg" alt="">
           </div>
-          <div class="overflow-hidden rounded-lg bg-slate-400 h-20 w-36 flex-shrink-0 -translate-x-14">
-            <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/6994855/pexels-photo-6994855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0 -translate-x-14 md:translate-x-20">
+            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/22.jpg" alt="">
+            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/23.jpg" alt="">
           </div>
-          <div class="overflow-hidden rounded-lg bg-slate-400 h-20 w-36 flex-shrink-0 -translate-x-14">
-            <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/6994855/pexels-photo-6994855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0 -translate-x-14 md:translate-x-20">
+            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/20.jpg" alt="">
+            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/17.jpg" alt="">
           </div>
         </div>
         <div class="flex items-center gap-4">
-          <div class="overflow-hidden rounded-lg bg-slate-400 h-20 w-32">
-            <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-32 md:w-60">
+            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/13.jpg" alt="">
+            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/33.jpg" alt="">
           </div>
-          <div class="overflow-hidden rounded-lg bg-slate-400 h-20 w-36">
-            <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/6647119/pexels-photo-6647119.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64">
+            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/5.jpg" alt="">
+            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/7.jpg" alt="">
           </div>
-           <div class="overflow-hidden rounded-lg bg-slate-400 h-20 w-32">
-            <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/6646883/pexels-photo-6646883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+           <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-32 md:w-60">
+            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/11.jpg" alt="">
+            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/12.jpg" alt="">
           </div>
-          <div class="overflow-hidden rounded-lg bg-slate-400 h-20 w-36">
-            <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/6994855/pexels-photo-6994855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64">
+            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/18.jpg" alt="">
+            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/37.jpg" alt="">
           </div>
         </div>
+        </div>
       </div>
-      <div class="text-center mb-12">
-        <Headline>causas</Headline>
-        <Title>Nuestros programas de ayuda</Title>
-        <div class="flex gap-4 overflow-x-scroll scroll-smooth">
+      <div class="text-center mb-32 md:container md:mx-auto md:px-8 md:flex md:gap-12">
+        <div class="md:text-left md:basis-1/3 xl:basis-3/4 2xl:basis-11/12">
+          <Headline>Causas</Headline>
+          <Title>Nuestros programas de ayuda</Title>
+          <p class="hidden md:block text-gray-400 text-xl">Lorem ipsum</p>
+        </div>
+        <div class="flex gap-4 overflow-x-scroll scroll-smooth md:overflow-x-visible">
           <CauseCard img="https://images.pexels.com/photos/6994963/pexels-photo-6994963.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" title="ucad" description="Una comida caliente al Día, nuestra causa principal para llegar con una cena caliente para personas vulnerables."/>
           <CauseCard img="https://images.pexels.com/photos/6994963/pexels-photo-6994963.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" title="ucad" description="Una comida caliente al Día, nuestra causa principal para llegar con una cena caliente para personas vulnerables."/>
         </div>
       </div>
-      <div class="text-center container mx-auto mb-20 md:mb-32">
-        <div class="md:flex">
-          <div class="md:flex md:flex-col md:w-1/2 ">
-            <div class="md:text-left md:mb-10">
+      <div class="text-center container mx-auto mb-32 md:px-8">
+        <div class="lg:flex md:items-center">
+          <div class="lg:flex lg:flex-col lg:w-1/2 ">
+            <div class="lg:text-left md:mb-10">
             <Headline>Cómo trabajamos</Headline>
             <Title classes="px-8 md:px-0">Cómo logramos llegar a cientos de personas con ayuda.</Title>
           </div>
           <div class="flex pl-8 md:pl-0">
-            <div class="flex flex-col basis-7/12 md:basis-auto md:flex-row md:gap-8">
+            <div class="flex flex-col basis-7/12 md:basis-auto lg:flex-row lg:gap-8">
               <div class="text-left mb-16 md:basis-1/2">
                 <HandIcon classes="w-16 h-16 md:w-24 md:h-24" />
                 <h4 class="font-title text-xl mb-2 md:text-2xl">Recaudar</h4>
@@ -123,16 +134,16 @@ import BoxIcon from '../components/icons/BoxIcon.astro'
           </div>
           </div>
           <div class="hidden md:block flex-grow">
-            <Charity classes="w-2/3 ml-auto"/>
+            <Charity classes="w-2/3 ml-auto lg:w-5/6"/>
           </div>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center md:mb-32">
         <Headline>colaboradores</Headline>
         <Title>Quienes hacen esto posible</Title>
         <LogoSlider />
       </div>
-      <div class="text-center container mx-auto px-8 md:px-0 relative top-40 z-10">
+      <div class="text-center container mx-auto px-8 relative top-40 z-10">
         <div class="md:flex md:justify-between">
           <div class="md:text-left md:basis-1/2">
             <Headline>Ser parte</Headline>
@@ -152,7 +163,7 @@ import BoxIcon from '../components/icons/BoxIcon.astro'
     </main>
     <footer class="bg-[#612D87] relative pt-72">
       <div class="flex justify-between px-8 md:px-0 items-end pb-10 container mx-auto">
-        <Logo2 classes="w-36 h-40 block md:hidden"/>
+        <Logo2 classes="w-36 md:w-64 h-40 block md:hidden"/>
         <Logo3 classes="w-96 h-32 hidden md:block" />
         <div class="flex gap-4">
           <a class="h-8 w-8 md:h-10 md:w-10 flex items-center justify-center border border-white rounded md:rounded-md transition-all group hover:bg-[#E83771] cursor-pointer opacity-50 hover:opacity-100 hover:border-[#E83771]">
@@ -172,3 +183,17 @@ import BoxIcon from '../components/icons/BoxIcon.astro'
     </footer>
 	</body>
 </html>
+<script>
+  const images = document.querySelectorAll('.image');
+  const imagesBack = document.querySelectorAll('.image-back');
+  setInterval(() => {
+    for (let index = 0; index < images.length; index++) {
+      images[index].setAttribute('src', `/images/${Math.floor(Math.random() * 38)}.jpg`);
+    }
+  }, 8000);
+  setInterval(() => {
+    for (let index = 0; index < images.length; index++) {
+      imagesBack[index].setAttribute('src', `/images/${Math.floor(Math.random() * 38)}.jpg`);
+    }
+  }, 12000);
+</script>
