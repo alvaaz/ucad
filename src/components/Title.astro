@@ -1,4 +1,12 @@
 ---
-const {classes} = Astro.props
+  const TYPES = {
+    primary: 'text-gray-900',
+    secondary: 'text-white',
+  }
+  const { classes } = Astro.props
+  const type = TYPES[Astro.props.type]
 ---
-<h2 class={`text-gray-900 text-3xl lg:text-4xl 2xl:text-5xl font-title mb-10 ${classes}`}><slot /></h2>
+
+<h2 class={`text-3xl lg:text-4xl 2xl:text-5xl font-title mb-10 ${classes} ${type}`}>
+  <slot />
+</h2>

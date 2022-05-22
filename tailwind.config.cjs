@@ -11,15 +11,15 @@ module.exports = {
           '100%': { opacity: 1 }
         },
         heroImage: {
-          '0%': { backgroundImage: "url('/images/1.jpg')" },
-          '24%': { backgroundImage: "url('/images/1.jpg')" },
-          '25%': { backgroundImage: "url('/images/11.jpg')" },
-          '49%': { backgroundImage: "url('/images/11.jpg')" },
-          '50%': { backgroundImage: "url('/images/21.jpg')" },
-          '74%': { backgroundImage: "url('/images/21.jpg')" },
-          '75%': { backgroundImage: "url('/images/27.jpg')" },
-          '99%': { backgroundImage: "url('/images/27.jpg')" },
-          '100%': { backgroundImage: "url('/images/1.jpg')" },
+          '0%': { backgroundImage: "url('/images/social/1.jpg')" },
+          '24%': { backgroundImage: "url('/images/social/1.jpg')" },
+          '25%': { backgroundImage: "url('/images/social/11.jpg')" },
+          '49%': { backgroundImage: "url('/images/social/11.jpg')" },
+          '50%': { backgroundImage: "url('/images/social/21.jpg')" },
+          '74%': { backgroundImage: "url('/images/social/21.jpg')" },
+          '75%': { backgroundImage: "url('/images/social/27.jpg')" },
+          '99%': { backgroundImage: "url('/images/social/27.jpg')" },
+          '100%': { backgroundImage: "url('/images/social/1.jpg')" },
         }
       }
     },

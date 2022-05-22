@@ -1,87 +1,22 @@
+---
+const partners = ["carabineros", "casona", "elbuendatito", "dondeelnino", "entrefuego", "lilium", "rewind", "sibarita", "soussol", "trotamundo"]
+---
+
 <div id="container" class="overflow-x-hidden whitespace-nowrap max-w-full pointer-events-none flex justify-center md:pt-10">
   <div id="content" class="flex flex-shrink-0">
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-      <img class="object-contain h-24 w-40" src="/casona.png" alt="">
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-    <img class="object-contain h-24 w-40" src="/carabineros.png" alt="">
-
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-    <img class="object-contain h-24 w-40" src="/elbuendatito.png" alt="">
-
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-    <img class="object-contain h-24 w-40" src="/dondeelnino.png" alt="">
-
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-
-    <img class="object-contain h-24 w-40" src="/entrefuego.png" alt="">
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-
-    <img class="object-contain h-24 w-40" src="/lilium.png" alt="">
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-
-    <img class="object-contain h-24 w-40" src="/rewind.png" alt="">
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-
-    <img class="object-contain h-24 w-40" src="/sibarita.png" alt="">
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-
-    <img class="object-contain h-24 w-40" src="/soussol.png" alt="">
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-
-    <img class="object-contain h-24 w-40" src="/trotamundo.png" alt="">
-    </div>
+    {partners.map(partner => (
+      <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
+        <img class="object-contain h-24 w-40" src={`images/partners/${partner}.png`} alt="">
+      </div>
+    ))}
   </div>
-  <div id="content2" class="flex">
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-      <img class="object-contain h-24 w-40" src="/casona.png" alt="">
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-    <img class="object-contain h-24 w-40" src="/carabineros.png" alt="">
-
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-    <img class="object-contain h-24 w-40" src="/elbuendatito.png" alt="">
-
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-    <img class="object-contain h-24 w-40" src="/dondeelnino.png" alt="">
-
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-
-    <img class="object-contain h-24 w-40" src="/entrefuego.png" alt="">
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-
-    <img class="object-contain h-24 w-40" src="/lilium.png" alt="">
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-
-    <img class="object-contain h-24 w-40" src="/rewind.png" alt="">
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-
-    <img class="object-contain h-24 w-40" src="/sibarita.png" alt="">
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-
-    <img class="object-contain h-24 w-40" src="/soussol.png" alt="">
-    </div>
-    <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-
-    <img class="object-contain h-24 w-40" src="/trotamundo.png" alt="">
-    </div>
-  </div>
-
+  <div id="contentFixed" class="flex">
+   {partners.map(partner => (
+      <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
+        <img class="object-contain h-24 w-40" src={`images/partners/${partner}.png`} alt="">
+      </div>
+    ))}
+</div>
 </div>
 <script>
   let innerWidth = window.innerWidth
@@ -92,7 +27,7 @@
   let scrollX = 0;
   const container = document.getElementById('container')
   const content = document.getElementById('content')
-  const content2 = document.getElementById('content2')
+  const contentFixed = document.getElementById('contentFixed')
   function slider() {
     scrollX += 0.2
     container.scrollLeft = scrollX
@@ -105,10 +40,10 @@
   function init(){
     const enabled = innerWidth < 1920
     if(enabled) {
-      content2.classList.remove('hidden')
+      contentFixed.classList.remove('hidden')
       slider()
     } else {
-      content2.classList.add('hidden')
+      contentFixed.classList.add('hidden')
       container.scrollLeft = 0;
     }
   }

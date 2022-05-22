@@ -1,1 +1,11 @@
-<p class="uppercase tracking-wide text-pink-600 font-semibold text-sm md:text-base md:mb-4"><slot /></p>
+---
+  const TYPES = {
+    primary: 'text-pink-600',
+    secondary: 'text-white',
+  }
+  const type = TYPES[Astro.props.type]
+---
+
+<p class={`uppercase tracking-wide font-semibold text-sm md:text-base md:mb-4 ${type}`}>
+  <slot />
+</p>

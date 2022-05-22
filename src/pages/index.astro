@@ -1,199 +1,252 @@
 ---
-// Component Imports
-import Button from '../components/Button.astro';
-import Logo from '../components/Logo.astro';
-import Logo2 from '../components/Logo2.astro';
-import Logo3 from '../components/Logo3.astro';
-import Title from '../components/Title.astro';
-import Headline from '../components/Headline.astro';
-import Charity from '../components/icons/Charity.astro';
-import Phone from '../components/Phone.astro';
-import Facebook from '../components/Facebook.astro';
-import Instagram from '../components/Instagram.astro';
-import Twitter from '../components/Twitter.astro';
-import LogoSlider from '../components/LogoSlider.astro';
-import AccountInfo from '../components/AccountInfo.astro';
-import CauseCard from '../components/CauseCard.astro'
-import HandIcon from '../components/icons/HandIcon.astro'
-import BoxIcon from '../components/icons/BoxIcon.astro'
+  import Button from '../components/Button.astro';
+  import Logo from '../components/Logo.astro';
+
+  import Title from '../components/Title.astro';
+  import Headline from '../components/Headline.astro';
+  import LogoSlider from '../components/LogoSlider.astro';
+  import AccountInfo from '../components/AccountInfo.astro';
+  import CauseCard from '../components/CauseCard.astro'
+  import Footer from '../components/Footer.astro'
+
+  import Charity from '../components/icons/Charity.astro';
+  import Phone from '../components/icons/Phone.astro';
+  import HandIcon from '../components/icons/HandIcon.astro'
+  import BoxIcon from '../components/icons/BoxIcon.astro'
+
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>UCAD - Corporación iniciativa UCAD</title>
-	</head>
-	<body class="md:overflow-x-hidden">
-		<header class="h-full bg-cover relative from-cyan-500 to-blue-500 bg-[#612D87] animate-[heroImage_100s_linear_infinite] bg-center bg-blend-soft-light mb-20 md:mb-32">
-      <div class="container mx-auto px-8 pt-8 md:pt-16 pb-32 md:pb-64">
-        <div class="flex place-content-center mb-10 md:place-content-start md:mb-20"><Logo classes="w-20 h-16 md:w-32 md:h-24" /></div>
-        <h1 class="text-3xl font-bold text-white mb-4 font-title md:text-6xl md:w-1/2 md:mb-8">Corporación iniciativa UCAD</h1>
-        <p class="text-white w-3/5 mb-16 md:text-2xl md:w-1/2">Nuestra labor es ayudar a personas en situación de calle y adultos mayores en estado de vulneración.</p>
-        <Button>Sé parte</Button>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@600;700&display=swap"
+    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#612D87">
+  <title>UCAD - Corporación iniciativa UCAD</title>
+</head>
+<body class="md:overflow-x-hidden touch-pan-y">
+  <header
+    class="h-full bg-cover relative from-cyan-500 to-blue-500 bg-[#612D87] animate-[heroImage_100s_linear_infinite] bg-center bg-blend-soft-light mb-20 md:mb-32">
+    <div class="container mx-auto px-8 pt-8 md:pt-16 pb-32 md:pb-64">
+      <div class="flex place-content-center mb-10 md:place-content-start md:mb-20">
+        <Logo classes="w-20 h-16 md:w-32 md:h-24" />
       </div>
-      <div class="absolute -bottom-px md:-bottom-1 2xl:-bottom-2 left-0 w-full overflow-hidden">
-        <svg class="relative block w-full fill-white" viewBox="0 0 428 30" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0.699707C68.3516 18.5165 140.068 28 214 28C287.932 28 359.648 18.5165 428 0.699707V29.5H0V0.699707Z"/>
-        </svg>
-      </div>
+      <h1 class="text-3xl font-bold text-white mb-4 font-title md:text-6xl md:w-1/2 md:mb-8">Corporación iniciativa UCAD
+      </h1>
+      <p class="text-white w-3/5 mb-16 md:text-2xl md:w-1/2">Nuestra labor es ayudar a personas en situación de calle y
+        adultos mayores en estado de vulneración.</p>
 
-    </header>
-    <main>
-      <div class="text-center mb-32 md:mb-40 md:flex md:gap-10 container mx-auto md:px-8">
-        <div class="md:text-left md:flex-shrink-0 md:basis-1/2">
-          <Headline>quiénes somos</Headline>
-          <Title>Nuestra misión es darle una comida caliente</Title>
-          <p class="text-base text-gray-400 mb-16 md:text-xl">Somos una corporación que nace en la comuna de Quilpué cuyo interés es ir en ayuda de personas en situación de calle y adultos mayores que se encuentran en estado de vulneración alimentaria.</p>
+    </div>
+    <div class="absolute -bottom-px md:-bottom-1 2xl:-bottom-2 left-0 w-full overflow-hidden">
+      <svg class="relative block w-full fill-white" viewBox="0 0 428 30" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0 0.699707C68.3516 18.5165 140.068 28 214 28C287.932 28 359.648 18.5165 428 0.699707V29.5H0V0.699707Z" />
+      </svg>
+    </div>
+
+  </header>
+  <main>
+    <div class="text-center mb-32 md:mb-40 md:flex md:gap-10 container mx-auto md:px-8">
+      <div class="md:text-left md:flex-shrink-0 md:basis-1/2">
+        <Headline type="primary">quiénes somos</Headline>
+        <Title>Nuestra misión es darle una comida caliente</Title>
+        <p class="text-base text-gray-400 mb-16 md:text-xl">Somos una corporación que nace en la comuna de Quilpué cuyo
+          interés es ir en ayuda de personas en situación de calle y adultos mayores que se encontraban en estado de
+          vulneración alimentaria.</p>
+      </div>
+      <div class="overflow-x-hidden md:absolute md:left-1/2">
+        <div class="flex items-center gap-4 mb-4 overflow-hidden md:translate-x-20">
+          <div class="images relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-32 md:w-60 flex-shrink-0">
+            <img
+              class="absolute opacity-100 transition-opacity ease-in-out duration-300 left-0 z-10 h-full w-full object-cover"
+              src="images/social/2.jpg" alt="">
+            <img class="absolute left-0 h-full w-full object-cover" src="images/social/4.jpg" alt="">
+          </div>
+          <div class="images relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0">
+            <img
+              class="absolute opacity-100 transition-opacity ease-in-out duration-300 left-0 z-10 h-full w-full object-cover"
+              src="images/social/9.jpg" alt="">
+            <img class="absolute left-0 h-full w-full object-cover" src="images/social/31.jpg" alt="">
+          </div>
+          <div class="images relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-32 md:w-60 flex-shrink-0">
+            <img
+              class="absolute opacity-100 transition-opacity ease-in-out duration-300 left-0 z-10 h-full w-full object-cover"
+              src="images/social/27.jpg" alt="">
+            <img class="absolute left-0 h-full w-full object-cover" src="images/social/24.jpg" alt="">
+          </div>
+          <div class="images relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0">
+            <img
+              class="absolute opacity-100 transition-opacity ease-in-out duration-300 left-0 z-10 h-full w-full object-cover"
+              src="images/social/37.jpg" alt="">
+            <img class="absolute left-0 h-full w-full object-cover" src="images/social/29.jpg" alt="">
+          </div>
+          <div class="images relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0">
+            <img
+              class="absolute opacity-100 transition-opacity ease-in-out duration-300 left-0 z-10 h-full w-full object-cover"
+              src="images/social/22.jpg" alt="">
+            <img class="absolute left-0 h-full w-full object-cover" src="images/social/23.jpg" alt="">
+          </div>
+          <div class="images relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0">
+            <img
+              class="absolute opacity-100 transition-opacity ease-in-out duration-300 left-0 z-10 h-full w-full object-cover"
+              src="images/social/20.jpg" alt="">
+            <img class="absolute left-0 h-full w-full object-cover" src="images/social/17.jpg" alt="">
+          </div>
         </div>
-        <div>
-          <div class="flex items-center gap-4 mb-4 overflow-hidden">
-          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-32 md:w-60 flex-shrink-0 -translate-x-14 md:translate-x-20">
-            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/2.jpg" alt="">
-            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/4.jpg" alt="">
+        <div class="flex items-center gap-4 md:translate-x-10">
+          <div class="images relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-32 md:w-60 flex-shrink-0">
+            <img
+              class="absolute opacity-100 transition-opacity ease-in-out duration-300 left-0 z-10 h-full w-full object-cover"
+              src="images/social/13.jpg" alt="">
+            <img class="absolute left-0 h-full w-full object-cover" src="images/social/33.jpg" alt="">
           </div>
-          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0 -translate-x-14 md:translate-x-20">
-            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/9.jpg" alt="">
-            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/31.jpg" alt="">
+          <div class="images relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0">
+            <img
+              class="absolute opacity-100 transition-opacity ease-in-out duration-300 left-0 z-10 h-full w-full object-cover"
+              src="images/social/5.jpg" alt="">
+            <img class="absolute left-0 h-full w-full object-cover" src="images/social/7.jpg" alt="">
           </div>
-           <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-32 md:w-60 flex-shrink-0 -translate-x-14 md:translate-x-20">
-            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/27.jpg" alt="">
-            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/24.jpg" alt="">
+          <div class="images relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-32 md:w-60 flex-shrink-0">
+            <img
+              class="absolute opacity-100 transition-opacity ease-in-out duration-300 left-0 z-10 h-full w-full object-cover"
+              src="images/social/11.jpg" alt="">
+            <img class="absolute left-0 h-full w-full object-cover" src="images/social/12.jpg" alt="">
           </div>
-          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0 -translate-x-14 md:translate-x-20">
-            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/38.jpg" alt="">
-            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/29.jpg" alt="">
+          <div class="images relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0">
+            <img
+              class="absolute opacity-100 transition-opacity ease-in-out duration-300 left-0 z-10 h-full w-full object-cover"
+              src="images/social/18.jpg" alt="">
+            <img class="absolute left-0 h-full w-full object-cover" src="images/social/37.jpg" alt="">
           </div>
-          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0 -translate-x-14 md:translate-x-20">
-            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/22.jpg" alt="">
-            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/23.jpg" alt="">
-          </div>
-          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64 flex-shrink-0 -translate-x-14 md:translate-x-20">
-            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/20.jpg" alt="">
-            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/17.jpg" alt="">
-          </div>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-32 md:w-60">
-            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/13.jpg" alt="">
-            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/33.jpg" alt="">
-          </div>
-          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64">
-            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/5.jpg" alt="">
-            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/7.jpg" alt="">
-          </div>
-           <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-32 md:w-60">
-            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/11.jpg" alt="">
-            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/12.jpg" alt="">
-          </div>
-          <div class="relative overflow-hidden rounded-lg bg-slate-400 h-20 md:h-40 w-36 md:w-64">
-            <img class="image absolute left-0 animate-[opacityLoop_10s_linear_infinite] z-10 h-full w-full object-cover" src="/images/18.jpg" alt="">
-            <img class="image-back absolute left-0 h-full w-full object-cover" src="/images/37.jpg" alt="">
-          </div>
-        </div>
         </div>
       </div>
-      <div class="text-center mb-32 md:container md:mx-auto md:px-8 md:flex md:gap-12">
-        <div class="md:text-left md:basis-1/3 xl:basis-3/4 2xl:basis-11/12">
+    </div>
+    <div class="text-center mb-32 md:container md:mx-auto px-8">
+      <div class="flex flex-col lg:flex-row bg-[#E83771] rounded-2xl text-white overflow-hidden">
+        <div class="md:text-left basis-1/2 p-8 md:p-12 xl:p-24">
           <Headline>Causas</Headline>
-          <Title>Nuestros programas de ayuda</Title>
-          <p class="hidden md:block text-gray-400 text-xl">Lorem ipsum</p>
+          <Title type="secondary">Nuestros programas de ayuda</Title>
+          <p class="text-xl mb-8">A través de una importante cadena logística solidaria
+            buscamos entregar un importante aporte nutricional, que ayude a fortalecer el sistema inmunológico de las
+            personas más expuestas de nuestra sociedad, mediante la ingesta de una comida balanceada nutricionalmente.
+            La elaboración de comidas calientes por parte de los restaurant Rewind, Sous Sol, La Casona de Quilpué,
+            Sibaritaclub y Trotamundos Terraza se convierten en pilares fundamentales de nuestro proyecto, todos ellos
+            pertenecientes a nuestra querida comuna de Quilpué.
+
+          </p>
+          <p class="text-xl">Toda esta cadena de amor se termina con la importante ayuda de
+            las oficinas de Integración comunitaria de
+            Carabineros de la Segunda Comisaria de Quilpué, que a través de su estrategia de trabajo del Modelo de
+            Integración Carabineros – Comunidad (MICC), son los distribuidores de las comidas a nuestros beneficiarios.
+            Cada tarde se retiran del lugar de preparación y así llevarlas “calentitas” a su destino.</p>
         </div>
-        <div class="flex gap-4 overflow-x-scroll scroll-smooth md:overflow-x-visible">
-          <CauseCard img="https://images.pexels.com/photos/6994963/pexels-photo-6994963.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" title="ucad" description="Una comida caliente al Día, nuestra causa principal para llegar con una cena caliente para personas vulnerables."/>
-          <CauseCard img="https://images.pexels.com/photos/6994963/pexels-photo-6994963.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" title="ucad" description="Una comida caliente al Día, nuestra causa principal para llegar con una cena caliente para personas vulnerables."/>
+        <div class="basis-1/2 ">
+          <img class="w-full h-full object-cover" src="images/social/21.jpg" alt="">
         </div>
       </div>
-      <div class="text-center container mx-auto mb-32 md:px-8">
-        <div class="lg:flex md:items-center">
-          <div class="lg:flex lg:flex-col lg:w-1/2 ">
-            <div class="lg:text-left md:mb-10">
-            <Headline>Cómo trabajamos</Headline>
+    </div>
+
+    <div class="text-center container mx-auto mb-32 md:px-8">
+      <div class="lg:text-left md:mb-10 lg:hidden">
+        <Headline type="primary">Cómo trabajamos</Headline>
+        <Title classes="px-8 md:px-0">Cómo logramos llegar a cientos de personas con ayuda.</Title>
+      </div>
+      <div class="md:flex md:items-center">
+        <div class="md:flex md:flex-col md:w-4/6">
+          <div class="lg:text-left md:mb-10 hidden lg:block">
+            <Headline type="primary">Cómo trabajamos</Headline>
             <Title classes="px-8 md:px-0">Cómo logramos llegar a cientos de personas con ayuda.</Title>
           </div>
           <div class="flex pl-8 md:pl-0">
             <div class="flex flex-col basis-7/12 md:basis-auto lg:flex-row lg:gap-8">
               <div class="text-left mb-16 md:basis-1/2">
-                <HandIcon classes="w-16 h-16 md:w-24 md:h-24" />
+                <BoxIcon classes="w-16 h-16 md:w-24 md:h-24" />
                 <h4 class="font-title text-xl mb-2 md:text-2xl">Recaudar</h4>
-                <p class="text-gray-400 text-sm md:text-xl">Recaudamos fondos de la sociedad civil, aportes de empresas y negocios, personas que de manera desinteresada han querido aportar para la elaboración de cenas y canastas.</p>
+                <p class="text-gray-400 md:text-lg lg:text-xl">Recaudamos fondos de la sociedad civil, aportes de
+                  empresas y negocios, personas que de manera desinteresada han querido aportar para la elaboración de
+                  cenas y canastas.</p>
               </div>
               <div class="text-left md:basis-1/2">
-                <BoxIcon classes="w-16 h-16 md:w-24 md:h-24"/>
+                <HandIcon classes="w-16 h-16 md:w-24 md:h-24" />
                 <h4 class="font-title text-xl mb-2 md:text-2xl">Entregamos</h4>
-                <p class="text-gray-400 text-sm md:text-xl">Diariamente entregamos los insumos a los restaurantes quieren preparan 51 cenas.</p>
+                <p class="text-gray-400 md:text-lg lg:text-xl">Diariamente entregamos los insumos a los restaurantes
+                  quieren preparan 51 cenas.</p>
               </div>
             </div>
             <div class="overflow-hidden basis-5/12 md:hidden">
-              <Charity classes="w-96 h-96"/>
+              <img src="images/hero.png" class="w-96 h-96 object-contain" />
             </div>
           </div>
-          </div>
-          <div class="hidden md:block flex-grow">
-            <Charity classes="w-2/3 ml-auto lg:w-5/6"/>
-          </div>
+        </div>
+        <div class="hidden md:block flex-grow">
+          <img src="images/hero.png" class="w-96 object-contain" />
         </div>
       </div>
-      <div class="text-center md:mb-32">
-        <Headline>colaboradores</Headline>
-        <Title>Quienes hacen esto posible</Title>
-        <LogoSlider />
-      </div>
-      <div class="text-center container mx-auto px-8 relative top-40 z-10">
-        <div class="md:flex md:justify-between">
-          <div class="md:text-left md:basis-1/2">
-            <Headline>Ser parte</Headline>
-            <Title>Puedes ser parte de UCAD</Title>
-            <p class="hidden md:block text-gray-400 text-xl">Diariamente entregamos los insumos a los restaurantes quieren preparan 51 cenas.</p>
-          </div>
-          <AccountInfo />
+    </div>
+    <div class="text-center md:mb-32">
+      <Headline type="primary">colaboradores</Headline>
+      <Title>Quienes hacen esto posible</Title>
+      <LogoSlider />
+    </div>
+    <div class="text-center container mx-auto px-8 relative top-40 z-10">
+      <div class="md:flex md:justify-between">
+        <div class="md:text-left md:basis-1/3 lg:basis-1/2">
+          <Headline type="primary">Se parte</Headline>
+          <Title>Puedes ser parte de UCAD</Title>
+          <p class="hidden md:block text-gray-400 md:text-lg lg:text-xl">Pudiese decir que se puede participar: donando
+            (tiempo, dinero y víveres), cocinando y compartiendo.</p>
         </div>
-        <div class="flex justify-between py-5 text-left">
-          <p class="text-sm md:text-xl text-gray-400 basis-1/2">¿Tienes víveres o insumos para la elaboración de cenas?</p>
-          <div class="flex gap-2 items-center">
-            <Phone />
-            <span class="text-white font-semibold">+56 9 4457 9011</span>
-          </div>
-        </div>
+        <AccountInfo />
       </div>
-    </main>
-    <footer class="bg-[#612D87] relative pt-72">
-      <div class="flex justify-between px-8 md:px-0 items-end pb-10 container mx-auto">
-        <Logo2 classes="w-36 md:w-64 h-40 block md:hidden"/>
-        <Logo3 classes="w-96 h-32 hidden md:block" />
-        <div class="flex gap-4">
-          <a class="h-8 w-8 md:h-10 md:w-10 flex items-center justify-center border border-white rounded md:rounded-md transition-all group hover:bg-[#E83771] cursor-pointer opacity-50 hover:opacity-100 hover:border-[#E83771]">
-            <Facebook classes="transition-all stroke-white w-4 h-4 md:w-6 md:h-6" />
-          </a>
-          <a class="h-8 w-8 md:h-10 md:w-10 flex items-center justify-center border border-white rounded md:rounded-md transition-all group hover:bg-[#E83771] cursor-pointer opacity-50 hover:opacity-100 hover:border-[#E83771]">
-
-          <Instagram classes="transition-all stroke-white w-4 h-4 md:w-6 md:h-6 " />
-          </a>
-          <a class="h-8 w-8 md:h-10 md:w-10 flex items-center justify-center border border-white rounded md:rounded-md transition-all group hover:bg-[#E83771] cursor-pointer opacity-50 hover:opacity-100 hover:border-[#E83771]">
-
-          <Twitter classes="transition-all stroke-white w-4 h-4 md:w-6 md:h-6" />
-          </a>
+      <div class="flex justify-between py-5 text-left md:flex-col md:w-1/2 lg:w-auto">
+        <p class="text-sm md:text-lg lg:text-xl text-gray-400 basis-1/2 md:mb-4">¿Tienes víveres o insumos para la
+          elaboración de cenas?</p>
+        <div class="flex gap-2 items-center">
+          <Phone classes="w-4 md:w-5 lg:w-6" />
+          <span class="text-white font-semibold md:text-lg lg:text-xl">+56 9 8137 4477</span>
         </div>
       </div>
-      <p class="text-white font-semibold text-center py-4 md:py-8 border-t border-violet-700 md:text-xl">Hecho con <a class="transition-all underline hover:text-slate-300" href="https://astro.build/">astro</a> y con 💛 por <a class="transition-all underline hover:text-slate-300" href="https://goede.cl" target="_blank" >goede.cl</a></p>
-    </footer>
-	</body>
+    </div>
+  </main>
+  <Footer />
+</body>
 </html>
 <script>
-  const images = document.querySelectorAll('.image');
-  const imagesBack = document.querySelectorAll('.image-back');
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  function filterBy(container, tag) {
+    return [...container.childNodes].filter(node => node.nodeName === tag)
+  }
+
+  const images = document.querySelectorAll('.images')
+
   setInterval(() => {
-    for (let index = 0; index < images.length; index++) {
-      images[index].setAttribute('src', `/images/${Math.floor(Math.random() * 38)}.jpg`);
+    for (let j = 0; j < images.length; j++) {
+      const imgs = filterBy(images[j], 'IMG')
+      let random = getRandomInt(36) + 1
+      while (imgs.some(img => img.src === random)) {
+        random = getRandomInt(36) + 1
+      }
+      imgs[0].classList.toggle("opacity-0")
+      setTimeout(() => {
+        let index = imgs[0].classList.contains("opacity-0") ? 0 : 1
+        imgs[index].src = `./images/social/${random}.jpg`
+      }, 1000)
     }
-  }, 8000);
-  setInterval(() => {
-    for (let index = 0; index < images.length; index++) {
-      imagesBack[index].setAttribute('src', `/images/${Math.floor(Math.random() * 38)}.jpg`);
-    }
-  }, 12000);
+  }, 10000)
+
+
 </script>
