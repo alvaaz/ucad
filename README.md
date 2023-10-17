@@ -31,6 +31,16 @@ yarn start
 npm run start
 ```
 
+## Deployment
+
+You can deploy this site using Vercel CLI.
+
+```sh
+vercel
+```
+
+Be sure to have installed Vercel CLI.
+
 ## Contributing
 
 First off, thanks for taking the time to contribute! Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly appreciated**.

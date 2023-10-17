@@ -1,53 +1,83 @@
 ---
-const partners = ["carabineros", "casona", "elbuendatito", "dondeelnino", "entrefuego", "rewind", "sibarita", "soussol", "trotamundo", "pan-brasil", "el-campito", "quinta-pata"]
+const partners = [
+  "carabineros",
+  "casona",
+  "elbuendatito",
+  "dondeelnino",
+  "entrefuego",
+  "rewind",
+  "sibarita",
+  "soussol",
+  "trotamundo",
+  "pan-brasil",
+  "el-campito",
+  "quinta-pata",
+  "bienvenidos",
+  "el-chacarron",
+  "la-ruta",
+];
 ---
 
-<div id="container" class="overflow-x-hidden whitespace-nowrap max-w-full pointer-events-none flex justify-center md:pt-10">
+<div
+  id="container"
+  class="overflow-x-hidden whitespace-nowrap max-w-full pointer-events-none flex justify-center md:pt-10"
+>
   <div id="content" class="flex flex-shrink-0">
-    {partners.map(partner => (
-      <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-        <img class="object-contain h-24 w-40" src={`images/partners/${partner}.png`} alt="">
-      </div>
-    ))}
+    {
+      partners.map((partner) => (
+        <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
+          <img
+            class="object-contain h-24 w-40"
+            src={`images/partners/${partner}.png`}
+            alt=""
+          />
+        </div>
+      ))
+    }
   </div>
   <div id="contentFixed" class="flex">
-   {partners.map(partner => (
-      <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
-        <img class="object-contain h-24 w-40" src={`images/partners/${partner}.png`} alt="">
-      </div>
-    ))}
-</div>
+    {
+      partners.map((partner) => (
+        <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
+          <img
+            class="object-contain h-24 w-40"
+            src={`images/partners/${partner}.png`}
+            alt=""
+          />
+        </div>
+      ))
+    }
+  </div>
 </div>
 <script>
-  let innerWidth = window.innerWidth
-  window.addEventListener('resize', function(e) {
+  let innerWidth = window.innerWidth;
+  window.addEventListener("resize", function (e) {
     innerWidth = window.innerWidth;
-  })
+  });
 
   let scrollX = 0;
-  const container = document.getElementById('container')
-  const content = document.getElementById('content')
-  const contentFixed = document.getElementById('contentFixed')
+  const container = document.getElementById("container");
+  const content = document.getElementById("content");
+  const contentFixed = document.getElementById("contentFixed");
   function slider() {
-    scrollX += 0.2
-    container.scrollLeft = scrollX
-    if(container.scrollLeft >= content.clientWidth) {
+    scrollX += 0.2;
+    container.scrollLeft = scrollX;
+    if (container.scrollLeft >= content.clientWidth) {
       scrollX = 0;
       container.scrollLeft = 0;
     }
   }
 
-  function init(){
-    const enabled = innerWidth < 1920
-    if(enabled) {
-      contentFixed.classList.remove('hidden')
-      slider()
+  function init() {
+    const enabled = innerWidth < 1920;
+    if (enabled) {
+      contentFixed.classList.remove("hidden");
+      slider();
     } else {
-      contentFixed.classList.add('hidden')
+      contentFixed.classList.add("hidden");
       container.scrollLeft = 0;
     }
   }
 
-  setInterval(init)
-
+  setInterval(init);
 </script>
