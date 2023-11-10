@@ -6,6 +6,7 @@ This is a simple landing page for UCAD. UCAD is a charity project that aims to h
 
 - [Astro](https://astro.build/)
 - [TailwindCSS](https://tailwindcss.com/)
+- [KeystoneJS](https://keystonejs.com/)
 
 ## Getting Started
 
