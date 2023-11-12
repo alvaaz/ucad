@@ -25,3 +25,9 @@ pnpm-debug.log*
 server/.keystone/admin
 server/keystone.db
 server/*.log
+
+
+node_modules
+.keystone/admin
+keystone.db
+*.log
