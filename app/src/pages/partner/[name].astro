@@ -1,6 +1,5 @@
 ---
 import Headline from "../../components/Headline.astro";
-import Title from "../../components/Title.astro";
 import Layout from "../../components/Layout.astro";
 
 export const prerender = false;
@@ -10,7 +9,8 @@ let partner;
 let content;
 
 if (name) {
-  const endpoint = "http://localhost:8000/api/graphql";
+  const endpoint =
+    import.meta.env.ENDPOINT || "http://localhost:8000/api/graphql";
   const graphqlQuery = {
     query: `query Query($where: PartnerWhereUniqueInput!) {
     partner(where: $where) {

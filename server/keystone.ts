@@ -16,7 +16,8 @@ export default withAuth(
       cors: {
         credentials: true,
         origin: [
-          `localhost:3000`
+          `localhost:3000`,
+          'https://iniciativaucad.cl/'
         ],
       },
     },
@@ -26,7 +27,8 @@ export default withAuth(
       path: '/api/graphql',
       cors: {
         origin: [
-          `localhost:3000`
+          `localhost:3000`,
+          'https://iniciativaucad.cl/'
         ],
         credentials: true,
       },
