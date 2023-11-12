@@ -17,6 +17,11 @@
     "tailwindcss": "^3.3.5"
   },
   "eslintConfig": {
-    "extends": ["standard"]
+    "extends": [
+      "standard"
+    ]
+  },
+  "dependencies": {
+    "@astrojs/vercel": "^5.2.0"
   }
 }
