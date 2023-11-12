@@ -8,6 +8,15 @@ const { withAuth } = createAuth({
   secretField: 'password',
   initFirstItem: {
     fields: ['name', 'email', 'password'],
+    itemData: {
+      role: {
+        create: {
+          name: 'Super User',
+          canManageContent: true,
+          canManageUsers: true,
+        },
+      },
+    },
   },
 });
 

@@ -110,7 +110,16 @@ var { withAuth } = (0, import_auth.createAuth)({
   identityField: "email",
   secretField: "password",
   initFirstItem: {
-    fields: ["name", "email", "password"]
+    fields: ["name", "email", "password"],
+    itemData: {
+      role: {
+        create: {
+          name: "Super User",
+          canManageContent: true,
+          canManageUsers: true
+        }
+      }
+    }
   }
 });
 var session = (0, import_session.statelessSessions)({
