@@ -14,7 +14,8 @@ import HandIcon from "../components/icons/HandIcon.astro";
 import BoxIcon from "../components/icons/BoxIcon.astro";
 import Layout from "../components/Layout.astro";
 
-const endpoint = "http://localhost:8000/api/graphql";
+const endpoint =
+  import.meta.env.ENDPOINT || "http://localhost:8000/api/graphql";
 const graphqlQuery = {
   query: `
       query Partners {
