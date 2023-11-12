@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "keystone dev",
     "start": "keystone start",
-    "build": "keystone build && keystone prisma migrate deploy",
-    "postinstall": "keystone build --no-ui --frozen"
+    "build": "keystone build && keystone prisma migrate deploy"
   },
   "dependencies": {
     "@keystone-6/auth": "^7.0.0",
