@@ -1,0 +1,75 @@
+---
+import Headline from "../../components/Headline.astro";
+import Title from "../../components/Title.astro";
+import Layout from "../../components/Layout.astro";
+
+export const prerender = false;
+
+const { name } = Astro.params;
+let partner;
+let content;
+
+if (name) {
+  const endpoint = "http://localhost:8000/api/graphql";
+  const graphqlQuery = {
+    query: `query Query($where: PartnerWhereUniqueInput!) {
+    partner(where: $where) {
+      name
+      photo {
+        publicUrl
+      }
+    }
+  }`,
+    variables: {
+      where: {
+        slug: name,
+      },
+    },
+  };
+
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(graphqlQuery),
+  };
+
+  const res = await fetch(endpoint, options);
+
+  if (res.ok) {
+    const { data } = await res.json();
+    partner = data.partner;
+  } else {
+    throw new Error(`Error fetching partner: ${res.status} ${res.statusText}`);
+  }
+
+  // Check if the partner data is null and set the content message accordingly
+  if (!partner) {
+    content = `<h1>Este lugar aún no es parte de UCAD aún.</h1>`;
+  } else {
+    content = `
+      <div>
+      <img src={partner.photo.publicUrl} alt="" />
+      <Title>${partner.name} apoya nuestra iniciativa.</Title>
+      <p class="text-base text-gray-400 mb-16 md:text-xl">
+        ${partner.name} nos apoya en la misión de llevar una comida caliente al día para cientos de familia en la región de Valparaíso.
+      </p></div>`;
+  }
+}
+---
+
+<Layout
+  title={`${partner ? `${partner.name} es parte de UCAD` : `Aún no es parte`}`}
+>
+  <body class="grid place-content-center w-screen h-screen text-center">
+    {
+      content ? (
+        <div set:html={content} />
+      ) : (
+        <Headline>{`No hay información disponible para ${partner.name}.`}</Headline>
+      )
+    }
+  </body>
+</Layout>

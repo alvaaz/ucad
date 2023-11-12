@@ -1,21 +1,5 @@
 ---
-const partners = [
-  "carabineros",
-  "casona",
-  "elbuendatito",
-  "dondeelnino",
-  "entrefuego",
-  "rewind",
-  "sibarita",
-  "soussol",
-  "trotamundo",
-  "pan-brasil",
-  "el-campito",
-  "quinta-pata",
-  "bienvenidos",
-  "el-chacarron",
-  "la-ruta",
-];
+const { data } = Astro.props;
 ---
 
 <div
@@ -24,11 +8,11 @@ const partners = [
 >
   <div id="content" class="flex flex-shrink-0">
     {
-      partners.map((partner) => (
+      data.map((partner) => (
         <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
           <img
             class="object-contain h-24 w-40"
-            src={`images/partners/${partner}.png`}
+            src={partner.photo.publicUrl}
             alt=""
           />
         </div>
@@ -37,11 +21,11 @@ const partners = [
   </div>
   <div id="contentFixed" class="flex">
     {
-      partners.map((partner) => (
+      data.map((partner) => (
         <div class="flex-shrink-0 inline-flex justify-center items-center mx-4">
           <img
             class="object-contain h-24 w-40"
-            src={`images/partners/${partner}.png`}
+            src={partner.photo.publicUrl}
             alt=""
           />
         </div>
