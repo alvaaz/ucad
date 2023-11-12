@@ -8,6 +8,7 @@ export default withAuth(
   config({
     db: {
       provider: 'postgresql',
+      useMigrations: true,
       url: DATABASE_URL,
     },
     server: {

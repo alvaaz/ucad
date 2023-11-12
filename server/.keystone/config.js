@@ -132,6 +132,7 @@ var keystone_default = withAuth(
   (0, import_core2.config)({
     db: {
       provider: "postgresql",
+      useMigrations: true,
       url: DATABASE_URL
     },
     server: {
