@@ -131,7 +131,8 @@ var keystone_default = withAuth(
       cors: {
         credentials: true,
         origin: [
-          `localhost:3000`
+          `localhost:3000`,
+          "https://iniciativaucad.cl/"
         ]
       }
     },
@@ -141,7 +142,8 @@ var keystone_default = withAuth(
       path: "/api/graphql",
       cors: {
         origin: [
-          `localhost:3000`
+          `localhost:3000`,
+          "https://iniciativaucad.cl/"
         ],
         credentials: true
       }

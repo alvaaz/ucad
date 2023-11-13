@@ -1,10 +1,12 @@
 ---
 import Headline from "../../components/Headline.astro";
 import Layout from "../../components/Layout.astro";
+import Footer from "../../components/Footer.astro";
 
 export const prerender = false;
 
 const { name } = Astro.params;
+
 let partner;
 let content;
 
@@ -47,12 +49,16 @@ if (name) {
 
   // Check if the partner data is null and set the content message accordingly
   if (!partner) {
-    content = `<h1>Este lugar aún no es parte de UCAD aún.</h1>`;
+    content = `<div class="text-center pt-32">
+      <h2 class="text-3xl lg:text-4xl 2xl:text-5xl font-title mb-10 text-pink-600">Este lugar aún no es parte de UCAD</h2>
+      <p class="text-base text-gray-400 mb-16 md:text-xl">
+        Te invitamos a apoyarnos en la misión de llevar una comida caliente al día para cientos de familia en la región de Valparaíso.
+      </p></div>`;
   } else {
     content = `
-      <div>
-      <img src={partner.photo.publicUrl} alt="" />
-      <Title>${partner.name} apoya nuestra iniciativa.</Title>
+      <div class="text-center">
+      <img src=${partner.photo.publicUrl} class="w-64 h-64 object-cover inline" alt="" />
+      <h2 class="text-3xl lg:text-4xl 2xl:text-5xl font-title mb-10 text-pink-600">${partner.name} apoya nuestra iniciativa</h2>
       <p class="text-base text-gray-400 mb-16 md:text-xl">
         ${partner.name} nos apoya en la misión de llevar una comida caliente al día para cientos de familia en la región de Valparaíso.
       </p></div>`;
@@ -63,7 +69,8 @@ if (name) {
 <Layout
   title={`${partner ? `${partner.name} es parte de UCAD` : `Aún no es parte`}`}
 >
-  <body class="grid place-content-center w-screen h-screen text-center">
+  <body>
+    <span id="partnerId" data-partner={partner}></span>
     {
       content ? (
         <div set:html={content} />
@@ -71,5 +78,13 @@ if (name) {
         <Headline>{`No hay información disponible para ${partner.name}.`}</Headline>
       )
     }
+    <Footer classes="pt-16" />
   </body>
 </Layout>
+<script>
+  import confetti from "canvas-confetti";
+  const partner = document.getElementById("partnerId");
+  if (partner.dataset.partner) {
+    confetti();
+  }
+</script>

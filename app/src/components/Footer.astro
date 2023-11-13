@@ -10,6 +10,8 @@
   const instagramLink = 'https://www.instagram.com/iniciativaucad/?hl=es'
   const whatsappLink = 'https://wa.me/56981374477'
 
+  const {classes} = Astro.props
+
   const social = {
     facebook: {
       link: facebookLink,
@@ -26,7 +28,7 @@
   }
 ---
 
-<footer class="bg-[#612D87] relative pt-72">
+<footer class=`bg-[#612D87] relative ${classes}`>
   <div class="flex justify-between px-8 items-end pb-10 container mx-auto">
     <Logo2 classes="w-36 md:w-64 h-40 block md:hidden" />
     <Logo3 classes="w-80 h-24 lg:w-96 lg:h-32 hidden md:block" />
