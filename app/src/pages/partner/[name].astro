@@ -59,9 +59,12 @@ if (name) {
       <div class="text-center">
       <img src=${partner.photo.publicUrl} class="w-64 h-64 object-cover inline" alt="" />
       <h2 class="text-3xl lg:text-4xl 2xl:text-5xl font-title mb-10 text-pink-600">${partner.name} apoya nuestra iniciativa</h2>
-      <p class="text-base text-gray-400 mb-16 md:text-xl">
-        ${partner.name} nos apoya en la misión de llevar una comida caliente al día para cientos de familia en la región de Valparaíso.
-      </p></div>`;
+      <p class="text-base text-gray-400 md:text-xl">
+        ${partner.name} colabora cocinando para UCAD, corporación que entrega comida a adultos mayores, niños y adultos en situación de calle en Quilpué
+      </p>
+      <p class="text-base text-gray-400 mb-16 md:text-xl">Te invitamos de ser parte de este proyecto, entérate como funcionamos ❤️</p>
+      <div class="flex justify-center"><iframe  width="560" height="315" src="https://www.youtube.com/embed/PhKBFsYmThA?si=rIRnil37OVTXmWE9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      </div>`;
   }
 }
 ---
@@ -70,21 +73,27 @@ if (name) {
   title={`${partner ? `${partner.name} es parte de UCAD` : `Aún no es parte`}`}
 >
   <body>
-    <span id="partnerId" data-partner={partner}></span>
-    {
-      content ? (
-        <div set:html={content} />
-      ) : (
-        <Headline>{`No hay información disponible para ${partner.name}.`}</Headline>
-      )
-    }
-    <Footer classes="pt-16" />
+    <div class="h-screen flex flex-col justify-between">
+      <span id="partnerId" data-partner={partner}></span>
+      {
+        content ? (
+          <div set:html={content} />
+        ) : (
+          <Headline>{`No hay información disponible para ${partner.name}.`}</Headline>
+        )
+      }
+      <Footer classes="pt-16 pt-20" />
+    </div>
   </body>
 </Layout>
 <script>
   import confetti from "canvas-confetti";
   const partner = document.getElementById("partnerId");
   if (partner.dataset.partner) {
-    confetti();
+    confetti({
+      scalar: 1.5,
+      spread: 200,
+      particleCount: 200,
+    });
   }
 </script>
